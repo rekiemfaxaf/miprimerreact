@@ -7,9 +7,6 @@
   text-align: center;
   display: inline-block;
 }
-.Header-background div{
-}
-
 .Header-ilustration{
   position: absolute;
   z-index: -1;
