@@ -5,6 +5,7 @@ import data from '../requests/places';
 import Title from '../components/Title';
 import Benefits from '../components/Benefits';
 import PlaceCard from '../components/places/PlaceCard';
+import TransitionGroup from 'react-transition-group/TransitionGroup'
 export default class Home extends React.Component{
 
   constructor(props){
@@ -13,7 +14,7 @@ export default class Home extends React.Component{
     this.state ={
       places: data.places
     }
-    
+
     this.hidePlace = this.hidePlace.bind(this);
   }
   places(){
@@ -46,9 +47,9 @@ export default class Home extends React.Component{
         </div>
         <div style={{'backgroundColor':indigo400, 'padding': '50px', 'color':'white'}}>
           <h3 style={{'fontSize':'3em'}}>Sitios Populares</h3>
-          <div className="row">
+          <TransitionGroup className="row">
             {this.places()}
-          </div>
+          </TransitionGroup>
         </div>
       </section>
     )
